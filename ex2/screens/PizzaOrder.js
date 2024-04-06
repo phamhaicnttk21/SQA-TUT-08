@@ -39,7 +39,7 @@ export default function PizzaOrder() {
     }
 
     function chooseToppingshandler(item) {
-        setPizzaDetails({ ...pizzaDetails, topping: item.name, price: pizzaDetails.price + item.price });
+        if (pizzaDetails.topping === '') setPizzaDetails({ ...pizzaDetails, topping: item.name, price: pizzaDetails.price + item.price });
     }
 
     function resetHandler() {
